@@ -104,22 +104,51 @@ Any figures used before real observations are available will be labelled illustr
 CampusFlow demonstrates a possible approach to structured college request management using Streamlit and MySQL. It has passed several basic synthetic-data tests, including request creation, required-field validation, duplicate checking, and normal database operation. Further permitted investigation, security improvements, failure-recovery testing, and measured workflow data are needed before claiming operational benefits.
 ## Existing College Workflow and Proposed Improvement
 
-### Existing workflow observed
+### Current workflow: evidence status
 
-During my observation of the college's request-handling process, I found that requests are handled through email. Email provides a familiar communication channel, but request tracking may require staff to review messages and follow up manually, depending on the existing process.
+The actual request-handling workflow at the selected college has not yet been independently verified. Email is considered a possible existing channel, but its use, handoffs, assignment process, approval requirements, and follow-up practices must be confirmed through authorized observation or voluntary interviews.
 
-The observation establishes email as the channel used. Further investigation is required to confirm how requests are assigned, prioritized, tracked, resolved, and communicated back to students.
+No claim about the college's current process, workload, delays, or performance is made without supporting evidence. The evidence log records this investigation as pending.
 
 ### Proposed workflow: CampusFlow
 
-CampusFlow is a prototype designed to centralize college-related requests. Students submit a request through a web form, select a category, and provide a description. The application stores the request in MySQL with a unique request ID and status. The staff demonstration interface allows the status to be updated as work progresses.
+CampusFlow is a prototype designed to centralize college-related requests. Students submit a request through a web form, select a category, and provide a description. The application validates required fields, checks for a matching open request, assigns a unique request ID, and stores the request in MySQL.
 
-### Comparison
+The proposed workflow is:
 
-The observed workflow uses email for handling requests. The proposed workflow uses a structured web form and a database-backed request record. CampusFlow demonstrates request submission, persistent storage, and status updates using synthetic test data.
+1. **Submit — Student:** Enter the request category and description.
+2. **Validate — System:** Check required fields and identify likely duplicates.
+3. **Register — System:** Save a valid request and return its request ID.
+4. **Review and assign — Responsible staff member:** Review the request and determine the appropriate department or next action. This is a proposed responsibility, not a verified college procedure.
+5. **Approve or escalate — Designated authority:** Requests involving restricted records, exceptions, or decisions beyond staff authority should be referred to the appropriate authorized person. Approval rules must be confirmed with the institution before real use.
+6. **Update — Responsible staff member:** Record progress and communicate the outcome through an approved channel.
+7. **Close — Responsible staff member:** Close the request when the issue is resolved, retaining an appropriate record of its outcome.
+8. **Recover — System and responsible staff member:** If submission or a database operation fails, show a clear error, avoid falsely confirming success, and provide a safe retry or escalation process. This behavior still requires controlled testing.
 
-The prototype has not yet been deployed in the college or evaluated by college staff. Therefore, improvements in response time, workload, or request completion cannot yet be claimed as measured outcomes.
+### Ownership and approval boundaries
+
+The student is responsible for providing accurate request details. The system is responsible for basic validation, duplicate warnings, request IDs, and persistence. A designated staff member would review and route requests under a future approved process. Decisions requiring institutional authority must remain with the relevant authorized person; the prototype does not determine or grant approval.
+
+The current Student/Staff selector is only a demonstration feature. It does not authenticate users or enforce secure authorization. CampusFlow must not be used to handle real confidential requests until authentication, server-side authorization, and institutional approval requirements are implemented and reviewed.
+
+### Comparison and expected benefits
+
+The current institutional process is still to be investigated. CampusFlow provides a testable alternative based on a structured form, a database-backed request record, and visible request statuses. Potential benefits include easier tracking, fewer duplicate submissions, and clearer ownership of follow-up work.
+
+These benefits are hypotheses, not measured outcomes. A fair comparison requires documenting the existing process, measuring handling time, recording handoffs and exceptions, and testing the proposed workflow with permission.
 
 ### Evidence and limitations
 
-The email-based workflow was observed. The CampusFlow prototype was tested separately using synthetic data. No actual student emails or personal information were used as test data. Additional evidence is needed to establish the number of requests handled, the time spent on each request, and the current follow-up process.
+CampusFlow was tested separately using synthetic data. Tests covered request submission, MySQL persistence, status updates, missing-field validation, duplicate detection, student-interface restrictions, and normal database availability. The role selector is not secure authentication, and database outage recovery has not been verified.
+
+No real student emails, identifiers, marks, fee records, credentials, or confidential institutional information were used as test data. The actual college workflow investigation remains pending. Any future observations should be dated, supported by evidence, and labelled as observed facts, estimates, or assumptions.
+
+### Net time-saving calculation
+
+Net time saved per request will be estimated using:
+
+**Net time saved = baseline handling time − proposed handling time − additional review and support time.**
+
+For illustration only, if baseline handling takes 12 minutes, the proposed process takes 7 minutes, and additional review/support takes 2 minutes, the estimated net saving is 3 minutes per request. At an assumed 100 requests per month, that would equal 300 minutes, or 5 hours per month.
+
+These values are illustrative assumptions, not measurements from the college. They must be replaced with evidence-based estimates when an authorized workflow investigation is possible. The calculation should include time spent correcting errors, reviewing duplicates, supporting users, and recovering from failures.

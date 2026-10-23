@@ -1,106 +1,149 @@
-# CampusFlow Test Cases
+﻿# CampusFlow Test Report
 
-**Project:** CampusFlow — College Request Management Prototype  
-**Test date:** 22 October 2026  
-**Test environment:** Windows, Python, Streamlit, MySQL  
-**Test data:** Synthetic demonstration data only
+**Project:** CampusFlow - College Request Management Prototype
+**Report prepared:** 23 October 2026
+**Test dates:** Individual observations are recorded in `evidence-log.csv`; some tests were performed on an earlier prototype version.
+**Environment:** Windows, Python, Streamlit, MySQL
+**Data:** Synthetic demonstration data only
 
-## 1. Test Results
 
-| Test ID | Action | Expected result | Observed result | Status |
+## 1. Purpose and scope
+
+This test report evaluates whether CampusFlow can accept a college-service request, validate required information, prevent a duplicate request in the tested scenario, store records in MySQL, and support a basic status update.
+
+The tests evaluate the prototype, not the security or performance of a live college system. Results are reported as observed; expected behavior is not treated as a successful test.
+
+## 2. Test summary
+
+| ID | Scenario | Expected result | Observed result | Status |
 |---|---|---|---|---|
-| TC-01: Normal request | Submit a request with the required information | Request is created with a unique ID and saved in MySQL | Request CF-741D25E9 was created and verified in MySQL | PASS |
-| TC-02: Persistent storage | Check the saved request and status in MySQL after app refresh | The request remains stored | Request record and status were verified using a MySQL query | PASS |
-| TC-03: Status update | Change a request to In Progress using the Staff demo interface | Status is updated and saved | Status In Progress was verified in MySQL | PASS |
-| TC-04: Missing information | Submit a request with an empty description | Validation warning appears and no request is created | The app displayed “Please fill in both required fields.” The request count remained 1 for STU002 | PASS |
-| TC-05: Duplicate request | Submit the same open request using the same student identifier and description | A duplicate warning appears and no duplicate record is created | The matching MySQL record count remained 1 | PASS |
-| TC-06: Student interface restriction | Select Student and inspect status-update controls | Status-update controls are hidden from the Student interface | The status-update controls were hidden | PASS — UI only |
-| TC-07: Normal database availability | Refresh the app while MySQL is running | The app loads without an error | The app loaded normally after refreshing | PASS |
-| TC-08: Unauthorized access | Attempt a staff status update without valid staff authentication | The system rejects unauthorized actions | Not tested. The current role selector is not secure authentication | NOT TESTED |
-| TC-09: Database failure recovery | Simulate a database outage, restore service, and verify the records | The app reports the failure safely and recovers without data loss or duplicate records | An actual outage and recovery have not been tested | NOT TESTED |
+| TC-01 | Normal request | Request receives a unique ID and is saved | A synthetic request was created and verified in MySQL | PASS |
+| TC-02 | Persistent storage | Saved record remains available after refresh | The record and status were verified using a MySQL query | PASS |
+| TC-03 | Staff status update | Status change is saved | Status changed to In Progress and was verified in MySQL | PASS |
+| TC-04 | Missing information | Validation warning; no incomplete request is inserted | Warning appeared; the tested record count remained unchanged | PASS |
+| TC-05 | Duplicate request | Matching open request is rejected without another record | Matching record count remained one in the tested case | PASS |
+| TC-06 | Student interface | Staff controls are hidden in Student mode | Status-update controls were hidden | PASS - interface only |
+| TC-07 | Normal database availability | App loads while MySQL is running | App loaded normally while the database was available | PASS |
+| TC-08 | Unauthorized staff action | A user without staff authorization cannot change status | No authentication or server-side staff authorization is implemented; a security rejection was not verified | NOT IMPLEMENTED / NOT TESTED |
+| TC-09 | Database failure and recovery | Safe error message; successful recovery after service restoration | Attempt to stop MySQL was blocked by insufficient permissions | BLOCKED - NOT VERIFIED |
 
-## 2. Detailed Test Notes
+## 3. Detailed observations
 
-### TC-01: Normal request
+### TC-01 - Normal request
 
-- **Purpose:** Verify that a request can be submitted and stored.
-- **Observed result:** A synthetic request was submitted successfully.
-- **Database verification:** Request ID CF-741D25E9 was present in the `campusflow.requests` table.
-- **Conclusion:** Basic request creation and MySQL storage worked in the tested scenario.
+**Method:** Submit a request with the required information using synthetic data.
 
-### TC-02: Persistent storage
+**Observed result:** A request was created successfully and its record was found in the `campusflow.requests` table.
 
-- **Purpose:** Verify that request data is stored in MySQL rather than only in temporary application state.
-- **Observed result:** The request record and its status were verified through a MySQL query.
-- **Limitation:** This confirms the tested record was stored; it does not constitute a full backup or disaster-recovery test.
+**Conclusion:** Basic request creation and database storage worked in the tested case.
 
-### TC-03: Status update
+### TC-02 - Persistent storage
 
-- **Purpose:** Check whether a request status can be changed and saved.
-- **Observed result:** The request status was updated to In Progress and verified in MySQL.
-- **Limitation:** The Staff role is a demonstration selector, not authenticated staff access.
+**Method:** Inspect the saved record and status in MySQL after the application interaction.
 
-### TC-04: Missing information
+**Observed result:** The record and status were present in MySQL.
 
-- **Purpose:** Check validation of required fields.
-- **Observed result:** When the description was left empty, the application displayed “Please fill in both required fields.”
-- **Database verification:** The number of records for student identifier STU002 remained 1.
-- **Conclusion:** The incomplete request was not inserted in the tested scenario.
+**Limitation:** This is not a backup, disaster-recovery, or data-integrity audit.
 
-### TC-05: Duplicate request
+### TC-03 - Status update
 
-- **Purpose:** Check whether an identical open request is prevented from being created again.
-- **Observed result:** The matching record count remained 1 after the duplicate test.
-- **Conclusion:** Duplicate prevention worked for the tested student identifier and description.
-- **Limitation:** This does not establish duplicate prevention under concurrent submissions or every possible input variation.
+**Method:** Change a request to In Progress using the Staff demonstration interface.
 
-### TC-06: Student interface restriction
+**Observed result:** The updated status was verified in MySQL.
 
-- **Purpose:** Check whether status-update controls are hidden when Student is selected.
-- **Observed result:** The status-update controls were hidden.
-- **Conclusion:** The interface restriction worked in the tested scenario.
-- **Security limitation:** Hiding controls is not secure authorization. A user may be able to select Staff. Production use would require authenticated accounts and server-side authorization checks.
+**Limitation:** The Staff selector is a demonstration control, not verified staff authentication.
 
-### TC-07: Normal database availability
+### TC-04 - Missing information
 
-- **Purpose:** Check normal application behavior while MySQL is running.
-- **Observed result:** The app loaded normally after refreshing.
-- **Conclusion:** Normal database availability was confirmed in this test.
-- **Limitation:** This was not an outage simulation and does not prove failure recovery.
+**Method:** Submit a request with an empty description.
 
-## 3. Untested Scenarios and Recovery Plan
+**Expected result:** The application warns the user and does not insert an incomplete request.
 
-### TC-08: Unauthorized access
+**Observed result:** The application displayed a required-fields warning, and the tested record count remained unchanged.
 
-**Current status:** Not tested.
+**Conclusion:** Required-field validation worked in this scenario.
 
-The current role selector is not secure authentication. A future test should attempt a status update without valid staff credentials and verify that the server rejects the operation. The application should use authenticated accounts and server-side role checks before this test can establish access-control behavior.
+### TC-05 - Duplicate request
 
-### TC-09: Database failure recovery
+**Method:** Submit the same open request again using the same synthetic tester and description.
 
-**Current status:** Not tested.
+**Expected result:** The application rejects the duplicate and retains one matching record.
 
-A future controlled test should simulate a database outage in a safe test environment. The application should show a clear error, avoid falsely reporting a successful submission, and reconnect safely after the database is restored. The test should verify that retries do not create duplicate records or lose successfully saved requests.
+**Observed result:** The matching MySQL record count remained one.
 
-## 4. Overall Result
+**Limitation:** This does not prove protection against concurrent submissions or every variation of duplicate text.
 
-The prototype passed the tested scenarios for normal request creation, database storage, status updates, missing-field validation, duplicate checking, student-interface restrictions, and normal database availability.
+### TC-06 - Student interface restriction
 
-The unauthorized-access and database-failure recovery scenarios remain untested. The current prototype is for demonstration only and is not production-ready.
+**Method:** Select Student mode and inspect the available controls.
 
-All test data is synthetic. These results do not establish how the actual college currently handles administrative requests.
-## 5. Five Synthetic Workflow Scenarios
+**Observed result:** Staff status-update controls were hidden.
 
-These scenarios evaluate how CampusFlow handles different request types. They use synthetic data and do not represent actual student cases.
+**Conclusion:** The interface behaved as expected.
 
-| Scenario | Synthetic request | Expected result | Evaluation |
+**Security limitation:** Hiding controls is not authorization. The current role selector permits a user to select Staff. Real deployment requires authenticated identities and server-side role checks.
+
+### TC-07 - Normal database availability
+
+**Method:** Refresh the application while MySQL is running.
+
+**Observed result:** The application loaded normally.
+
+**Limitation:** Normal operation does not demonstrate outage handling or recovery.
+
+### TC-08 - Unauthorized request
+
+**Objective:** Assess whether staff-only actions are protected from users without verified staff permissions.
+
+**Inspection:** The app uses a Student/Staff role selector. It does not implement verified user authentication or server-side staff authorization.
+
+**Result:** Unauthorized-access prevention has not been established. The absence of authorization was identified through code inspection; an actual authenticated access-control test was not completed.
+
+**Status:** NOT IMPLEMENTED / NOT TESTED.
+
+**Required improvement:** Add authenticated accounts, enforce staff permissions on the server for every status-changing operation, and test requests made without valid staff authorization before considering deployment.
+
+### TC-09 - Database failure and recovery
+
+**Objective:** Assess behavior during a temporary MySQL outage.
+
+**Initial state:** MySQL80 was confirmed running.
+
+**Test attempt:** An attempt to stop the service failed because of insufficient permissions.
+
+**Result:** The outage could not be induced, so error handling and recovery were not verified.
+
+**Status:** BLOCKED - test not completed.
+
+**Recovery plan:** In an authorized test environment, stop the database, attempt a request, and check that the app reports failure without claiming the request was saved. Restore MySQL, reload the app, and verify that existing records remain available and retrying does not create unintended duplicates.
+
+## 4. Five required synthetic workflow cases
+
+These five cases map directly to the assignment. The results below distinguish completed tests from scenarios whose behavior remains unverified.
+
+| Required case | Synthetic input or action | Expected behavior | Evidence and current status |
 |---|---|---|---|
-| SC-01 | Placement Query: “Need information about placement registration.” | Request is saved with a unique ID and Open status. | Normal submission was tested; use the recorded test evidence. |
-| SC-02 | Document Query: “Need information about obtaining a transcript.” | Request is saved under the Document Query category. | Test this scenario if it has not already been performed. |
-| SC-03 | Academic Query: “Need clarification about an examination timetable.” | Request is saved under the Academic Query category. | Test this scenario if it has not already been performed. |
-| SC-04 | Request with an empty description. | Validation warning appears and no request is created. | Previously tested; the record count remained unchanged. |
-| SC-05 | Submit the same open request twice using the same student identifier and description. | The duplicate is rejected and no extra record is created. | Previously tested; the matching record count remained one. |
+| Normal | Placement Query with all required fields | Create a unique request ID, save the record, set status to Open | Basic request creation was tested - PASS |
+| Missing information | Leave the description empty | Show validation warning and do not create a request | Previously tested - PASS |
+| Duplicate | Submit the same open request twice for the same synthetic tester | Reject the duplicate and retain one matching record | Previously tested - PASS for the tested case |
+| Unauthorized request | Attempt a staff status change without verified staff authorization | Reject the operation and preserve the existing status | Not implemented or verified - NOT TESTED |
+| Failed step | Attempt a request while MySQL is unavailable | Show a clear failure; do not falsely confirm saving; recover safely after database restoration | Outage test blocked by permissions - BLOCKED |
 
-### Evaluation limitations
+The normal, missing-information, and duplicate cases have recorded evidence. The unauthorized and failed-step cases are requirements for the proposed system, not passed tests.
 
-The normal submission, missing-description, and duplicate-request scenarios have recorded test evidence. The Document Query and Academic Query scenarios must be tested and their actual results recorded before they can be marked as passed. Expected results alone do not constitute test evidence.
+## 5. Limitations and next steps
+
+1. The app is a prototype, not a production-ready college service.
+2. The Student/Staff selector is not secure authentication.
+3. Database outage and recovery behavior remains unverified.
+4. Tests do not establish behavior under heavy load, concurrent submissions, or all possible input variations.
+5. The app tests use synthetic data and do not establish how the actual college currently handles requests.
+6. The workflow's real steps, handoffs, approval rules, and exceptions must be supported by the separate dated evidence log. Unobserved details must be labelled as assumptions or items requiring confirmation.
+
+Before any live deployment, implement authentication and authorization, test database failure and recovery, add appropriate logging and backups, and obtain approval from the responsible college authority.
+
+## 6. Overall result
+
+The tested prototype scenarios passed for normal request creation, persistent storage, a basic status update, missing-field validation, duplicate checking in the tested case, student-interface restrictions, and normal database availability.
+
+Unauthorized-access prevention and database failure recovery remain unverified. No claim is made that the prototype is secure, production-ready, or proven to improve the actual college workflow.
