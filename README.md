@@ -2,31 +2,32 @@
 
 **A practical, evidence-oriented approach to improving college workflows and aligning computer science education with industry needs.**
 
-This repository contains two connected projects developed for the HKAIverse.ai Round 2 assignment: a college-request management prototype and a curriculum comparison tool. The work combines workflow analysis, application development, testing, curriculum review, and documented limitations.
+This repository contains two connected projects developed for the HKAIverse.ai Round 2 assignment: a college-request management prototype and a curriculum comparison tool. The work combines workflow design, application development, prototype testing, curriculum review, and documented limitations.
 
 ## Project Overview
 
 | Component | Purpose | Main Deliverable |
 |---|---|---|
-| Task 1 — CampusFlow | Structure college requests and enable request-status tracking | Streamlit application with MySQL integration |
-| Task 2 — Curriculum Audit | Compare displayed CSE curriculum information with industry skill requirements | Curriculum dataset, audit report, and interactive comparison tool |
+| Task 1 — CampusFlow | Demonstrate a structured approach to college requests and request-status tracking | Streamlit application with MySQL integration |
+| Task 2 — Curriculum Audit | Compare available CSE curriculum information with selected industry skill requirements | Curriculum dataset, audit report, and interactive comparison tool |
 
 ## Task 1 — CampusFlow: College Workflow Improvement
 
 ### Problem
 
-College requests handled through email can be difficult to organize and track. The exact existing workflow, including staff handling and follow-up practices, requires further investigation.
+College requests may be difficult to organize and track when handled through informal channels. The actual workflow, including staff handling, approvals, exceptions, and follow-up practices, has not yet been independently investigated. CampusFlow is therefore a prototype for a proposed improvement, not a verified replacement for an observed institutional process.
 
 ### Proposed Solution
 
-CampusFlow is a prototype that provides a structured interface for submitting college requests and tracking their progress.
+CampusFlow provides a structured interface for submitting college requests and tracking their progress.
 
 **Key features**
+
 - Submit requests using a structured form.
 - Store request records in MySQL.
 - Generate a request identifier for tracking.
-- Display submitted requests in the staff interface.
-- Update request status, including Open, In Progress, and Closed.
+- Display submitted requests in the staff demonstration interface.
+- Update request status: Open, In Progress, or Closed.
 - Validate required fields and check for matching open requests.
 
 ### Implementation
@@ -38,13 +39,14 @@ CampusFlow is a prototype that provides a structured interface for submitting co
 
 ### Testing and Evidence
 
-The documented prototype checks cover request submission, persistent storage, status updates, missing-field validation, duplicate-request handling, and student-interface controls.
+Documented prototype checks cover request submission, MySQL persistence, status updates, missing-field validation, duplicate-request handling, and student-interface controls.
 
-Security testing and database-failure recovery have not been completed. The role selector is a demonstration feature, not secure authentication.
+Security testing and database-failure recovery have not been completed. The Student/Staff selector is a demonstration control, not secure authentication or server-side authorization. CampusFlow is not production-ready.
 
-**Time-saving analysis:** Any estimated time savings are illustrative until measured against the actual college workflow. See `task-1-college-workflow/calculations.md`.
+**Time-saving analysis:** Estimated time savings are illustrative assumptions, not measured outcomes. See `task-1-college-workflow/calculations.md`.
 
 **Explore the evidence**
+
 - [Workflow report](task-1-college-workflow/report.md)
 - [Test cases](task-1-college-workflow/test-cases.md)
 - [Evidence log](task-1-college-workflow/evidence-log.csv)
@@ -59,18 +61,19 @@ Examine the available CSE curriculum information, compare it with selected indus
 
 ### Approach
 
-1. Organize the available semester-wise course information.
-2. Record sources, access dates, and verification limitations.
-3. Compare course coverage with skills requested in selected job descriptions.
-4. Classify proposed curriculum changes as Keep, Update, Add, Reduce, or Verify.
-5. Document proposed AI-related exercises across five subjects.
-6. Calculate the potential impact of proposed changes while distinguishing displayed units from verified academic credits.
+1. Organize available semester-wise course information.
+2. Record source URLs, access dates, and verification limitations.
+3. Compare curriculum coverage with skills listed in selected job descriptions.
+4. Classify proposed changes as KEEP, UPDATE, ADD, REDUCE, or VERIFY.
+5. Document AI-assisted exercises across five subjects.
+6. Calculate the potential impact of proposed changes while distinguishing portal-displayed units from verified academic credits.
 
 ### Interactive Curriculum Comparison Tool
 
-The Streamlit tool allows reviewers to explore the curriculum dataset using available semester, subject-area, and recommendation filters. It also provides a proposed credit-impact calculator and verification checklist.
+The Streamlit tool allows reviewers to explore the curriculum dataset using the available semester, subject-area, and recommendation filters. It also provides a proposed credit-impact calculator and a verification checklist.
 
-**Open the source files**
+**Explore the curriculum audit**
+
 - [Curriculum comparison application](campusflow-app/curriculum_tool.py)
 - [Curriculum dataset](task-2-curriculum-audit/curriculum.csv)
 - [Curriculum audit report](task-2-curriculum-audit/report.md)
@@ -81,9 +84,11 @@ The Streamlit tool allows reviewers to explore the curriculum dataset using avai
 
 ### Important Limitations
 
-The available portal information is not yet confirmed as the official curriculum for the relevant admission batch. Displayed course units must not be treated as verified official credits. Semester VIII internship details remain pending verification, and job-description requirements should be checked against the original listings.
+The available portal information has not yet been confirmed as the official curriculum applicable to the 2023 admission batch. Portal-displayed units must not be treated as verified official credits. Semester VIII internship details remain pending verification, and job-description requirements must be checked against the original listings.
 
-Proposed curriculum changes are recommendations, not approved institutional changes.
+The 20–25% programme-credit impact target remains unverified until the official programme-credit total and the final list of affected courses are established.
+
+All curriculum changes are proposals, not approved institutional changes.
 
 ## Run the Applications Locally
 
@@ -92,7 +97,7 @@ Proposed curriculum changes are recommendations, not approved institutional chan
 - Python
 - pip
 - Streamlit
-- MySQL, if using the database-backed CampusFlow workflow
+- MySQL, for the database-backed CampusFlow application
 
 ### 1. Install dependencies
 
@@ -102,23 +107,25 @@ From the repository root:
 pip install -r requirements.txt
 ```
 
-### 2. Run CampusFlow
+### 2. Configure and run CampusFlow
+
+Configure database credentials locally in `.streamlit/secrets.toml`. Never commit passwords, access tokens, or real student information.
+
+Run:
 
 ```bash
 streamlit run campusflow-app/app.py
 ```
 
-Configure database credentials locally in `.streamlit/secrets.toml` before using the MySQL-backed features. Never commit passwords, access tokens, or real student information.
-
 ### 3. Run the curriculum comparison tool
 
-In another terminal:
+In a separate terminal:
 
 ```bash
 streamlit run campusflow-app/curriculum_tool.py
 ```
 
-The applications can run independently. CampusFlow uses the request-management workflow; the curriculum tool supports the curriculum audit.
+The applications can run independently. CampusFlow demonstrates request management, while the curriculum tool supports the curriculum audit.
 
 ## Repository Structure
 
@@ -128,33 +135,39 @@ hkaiverse-round2/
 │   ├── app.py
 │   ├── curriculum_tool.py
 │   └── data/
+│       └── requests.csv
 ├── task-1-college-workflow/
-│   ├── report.md
+│   ├── calculations.md
 │   ├── evidence-log.csv
-│   ├── test-cases.md
-│   └── calculations.md
-├── task-2-curriculum-audit/
 │   ├── report.md
+│   └── test-cases.md
+├── task-2-curriculum-audit/
+│   ├── ai-use-log.md
+│   ├── credit-calculations.md
 │   ├── curriculum.csv
 │   ├── job-descriptions.md
-│   ├── sources.md
-│   ├── credit-calculations.md
-│   └── ai-use-log.md
-├── requirements.txt
+│   ├── report.md
+│   └── sources.md
 ├── .gitignore
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ## Responsible Use of Evidence and AI
 
 - Distinguish observed facts from assumptions and proposed improvements.
 - Report only tests that were actually performed.
-- Keep unverified curriculum details and credit values clearly labelled.
+- Clearly label unverified curriculum details and credit values.
 - Document AI-assisted exercises and independently review their outputs.
-- Avoid claiming measured impact, verified security, or institutional approval without supporting evidence.
+- Do not claim measured impact, verified security, or institutional approval without supporting evidence.
+- Use synthetic demonstration data and protect credentials and personal information.
+
+## Submission References
+
+- **Repository:** [HKAIverse Round 2 on GitHub](https://github.com/akshay00527-cyber/hkaiverse-round2)
+- **Latest commit:** [e94b2a4e9945acca8f224403bc065d3836409b02](https://github.com/akshay00527-cyber/hkaiverse-round2/commit/e94b2a4e9945acca8f224403bc065d3836409b02)
+- **Release:** [v1.0.0](https://github.com/akshay00527-cyber/hkaiverse-round2/releases/tag/v1.0.0) — publish and verify this release before relying on the link.
 
 ## Project Goal
 
-The goal is to demonstrate practical problem-solving: identify a real workflow worth improving, build and test a working prototype, examine curriculum-to-industry alignment, and present recommendations with transparent evidence and limitations.
-
-**Repository:** [HKAIverse Round 2 on GitHub](https://github.com/akshay00527-cyber/hkaiverse-round2)
+Demonstrate practical problem-solving by designing a proposed workflow improvement, building and testing a working prototype, examining curriculum-to-industry alignment, and presenting recommendations with transparent evidence and limitations.
