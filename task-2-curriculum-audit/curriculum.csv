@@ -1,0 +1,52 @@
+semester,course_code,course_name,credits,course_type,verification_status,notes
+I,CH102,Environmental Sciences,2,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+I,CS101,Computer Programming,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+I,EG101,English Language Skills,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+I,HS101,Essence of Indian Traditional Knowledge,0,Other,Portal screenshot,Verify official course title and zero-unit status
+I,MA101,Linear Algebra and Ordinary Differential Equations,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+I,MT102,Engineering Graphics,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+I,PHY101,Physics,5,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+II,CH101,Chemistry,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+II,CS102,Data Structures,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+II,DS101,Introduction to AI and DS,3,Core,Portal screenshot,Verify official course title and displayed units
+II,EC101,Basic Electronics,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+II,EG102,Professional Communication,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+II,MA102,Higher Calculus,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+II,MT101,Digital Fabrication,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+III,CR201,Power Skills-I,1,Other,Portal screenshot,Displayed units; official credit equivalence to verify
+III,CS201,Object Oriented Programming Concepts,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+III,CS202,Theory of Computation,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+III,CS203,Design and Analysis of Algorithms,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+III,EC201,Introduction to IoT,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+III,MA201,Integral Transforms and Probability & Statistics,3,Core,Portal screenshot,Verify exact official course title
+III,MA202,Discrete Mathematics,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+III,MG201,Engineering Economics and Management,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,CR202,Power Skills - II,1,Other,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,CS204,Computer Organization and Architecture,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,CS205,Web-Enabled Technologies,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,CS206,Database Management Systems,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,DS202,Industry Coding Practice (Python/R),3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,DS203,Data Science,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,EC102,Fundamentals of Signal Processing,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+IV,HS201,Dynamics of Social Change,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,CR301,Power Skills - III,1,Other,Portal screenshot,Displayed units; official credit equivalence to verify
+V,CS301,Principle of Cryptography,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,CS302,Operating Systems,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,CS303,Programming Language and Compiler Construction,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,CS304,Software Engineering,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,DS303,Blockchain Technology,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,DS304,Machine Learning,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+V,HS301,Constitution of India,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VI,CR302,Power Skills-IV,1,Other,Portal screenshot,Displayed units; official credit equivalence to verify
+VI,CS305,Computer Vision,3,Core,Portal screenshot,Verify course code and displayed units against official curriculum
+VI,CS306,Computer Networks,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VI,CS307,Cloud Computing,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VI,DS201,Artificial Intelligence,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VI,DS307,Big Data Systems,3,Core,Portal screenshot,Verify course code and displayed units against official curriculum
+VI,SP301,Special Project,3,Project,Portal screenshot,Displayed units; official credit equivalence to verify
+VII,CS415,Ethical Hacking,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VII,DS306,Deep Learning,4,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VII,DS311,Natural Language Processing,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VII,DS401,Human Computer Interaction,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VII,MG401,Introduction to Entrepreneurship,3,Core,Portal screenshot,Displayed units; official credit equivalence to verify
+VIII,,Internship,Unknown,Internship,Pending,Semester VIII details are not yet displayed because the internship has not been completed; verify official credits and requirements when available

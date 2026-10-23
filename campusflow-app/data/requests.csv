@@ -1,0 +1,5 @@
+Request ID,Student,Category,Description,Status,Created
+CF-DEMO-001,Demo Student 1,Placement Query,How can I check my placement eligibility?,Open,2026-10-22
+CF-DEMO-002,Demo Student 2,Document Query,Which documents are required?,In Progress,2026-10-22
+CF-A742CA6F,TEST_STUDENT_01,Placement Query,I want to know the eligibility criteria for campus placements.,In Progress,2026-10-22
+CF-B54B968D,STU001,Placement Query,Need help with placement registration,Open,2026-10-22

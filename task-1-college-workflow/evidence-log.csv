@@ -1,0 +1,18 @@
+
+date,evidence_id,evidence_type,description,classification,source,limitations
+2026-10-22,E01,Prototype test,Submitted a request successfully,Observed,CampusFlow demo test,Synthetic data only
+2026-10-22,E02,Prototype test,Request remained visible after restarting the app,Observed,CampusFlow demo test,Local CSV persistence only
+2026-10-22,E03,Prototype test,Staff demo role updated request status,Observed,CampusFlow demo test,Role selector is not authentication
+2026-10-22,E04,Prototype test,Student demo role could not see status-update controls,Observed,CampusFlow demo test,Interface restriction only
+2026-10-22,E05,Prototype test,Duplicate submission triggered a warning,Observed,CampusFlow demo test,Duplicate matching uses identifier and description
+,P01,College workflow observation,Actual college request process not yet investigated,Pending,Requires permission,Do not claim actual college findings yet
+2026-10-22,E06,Database integration,Submitted a synthetic request and verified its record using a MySQL SELECT query,Observed,CampusFlow app and campusflow.requests table,Local MySQL database and synthetic data only
+2026-10-22,E07,Status persistence,Verified request CF-741D25E9 had status In Progress in MySQL after a staff demo status update,Observed,SELECT request_id student_id category status FROM requests,Demo role selector is not secure authentication
+2026-10-22,E06,Database integration,Submitted a synthetic request and verified its record in MySQL,Observed,CampusFlow app and campusflow.requests table,Local MySQL database and synthetic data only
+2026-10-22,E07,Status persistence,Verified request CF-741D25E9 had status In Progress in MySQL,Observed,MySQL SELECT query,Demo role selector is not secure authentication
+2026-10-22,E08,Duplicate validation,Confirmed the matching request count remained 1 after the duplicate test,Observed,MySQL COUNT query for STU002 and the test description,Synthetic data only
+2026-10-22,E09,Required-field validation,Submitted a request with an empty description and received a required-fields warning; request count remained 1,Observed,CampusFlow app and MySQL COUNT query,Synthetic data only
+2026-10-22,E10,Student interface restriction,Confirmed status-update controls were hidden when Student was selected,Observed,CampusFlow browser test,Interface restriction only; no secure authentication
+2026-10-22,E11,Normal database availability,Refreshed CampusFlow and confirmed the app loaded normally,Observed,CampusFlow browser test,Actual database outage and recovery not tested
+,P01,College workflow observation,Actual college request process not yet investigated,Pending,Requires permission,Do not claim actual college findings yet
+
