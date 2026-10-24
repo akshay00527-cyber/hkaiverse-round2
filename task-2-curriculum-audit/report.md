@@ -6,11 +6,9 @@ This report presents a preliminary audit and redesign proposal for the B.Tech Co
 
 The audit examines the balance between computing fundamentals, practical software development, artificial intelligence and machine learning, cybersecurity, data management, human-computer interaction, and project work. It uses student academic portal screenshots, an official programme reference, selected employer job descriptions, and AI-assisted subject exercises.
 
-The current credit analysis contains provisional portal-displayed values, but the complete semester inventory and the relationship between displayed units and official academic credits have not been fully reconciled. A previous draft recorded a subtotal of 152 displayed units for Semesters I–VII. The currently itemized figures for Semesters I, II, III, VI, and VII total 104 displayed units. These figures cover different levels of completeness and must be reconciled against the original portal evidence before either subtotal is treated as a complete inventory.
+The current `curriculum.csv` contains **152 portal-displayed units across Semesters I–VII**. These are arithmetic totals of the entries recorded in the file, not independently verified official academic credits. The applicable official curriculum version for the 2023 admission batch, the equivalence of displayed units to official credits, and Semester VIII internship requirements remain unverified.
 
-Semester VIII internship credits and requirements also remain unverified. The applicable official curriculum version for the 2023 admission batch must be confirmed before finalising the redesign or calculating the percentage of programme credits affected.
-
-The recommendations below are proposals for review, not approved institutional curriculum changes.
+The redesign recommendations are proposals for review, not approved institutional curriculum changes. The percentage of official programme credits affected by the proposed changes has not yet been calculated because the official credit denominator and final list of affected courses have not been verified.
 
 ## 2. Programme and Scope
 
@@ -23,7 +21,7 @@ The intended audit scope covers all eight semesters, including course prerequisi
 
 ## 3. Evidence and Method
 
-The preliminary course inventory in `curriculum.csv` was transcribed from student academic portal screenshots. The available evidence is incomplete or requires further verification for some semester records. Semester VIII internship credits and requirements have not yet been established.
+The preliminary course inventory in `curriculum.csv` was transcribed from student academic portal screenshots. Course codes, titles, displayed units, and official credit equivalence require verification against the curriculum applicable to the 2023 admission batch. Semester VIII internship credits and requirements have not yet been established.
 
 The official programme reference recorded in `sources.md` is:
 
@@ -58,17 +56,24 @@ These entries are based on the collected portal information and still require co
 
 ### Credit inventory status
 
-A previous draft recorded 152 portal-displayed units for Semesters I–VII. The current credit-calculation file itemizes 104 displayed units for Semesters I, II, III, VI, and VII:
+The current `curriculum.csv` contains the following provisional portal-displayed unit totals:
 
-- Semester I: 20 displayed units
-- Semester II: 24 displayed units
-- Semester III: 23 displayed units
-- Semester VI: 21 displayed units
-- Semester VII: 16 provisional units
+| Semester | Displayed units |
+|---|---:|
+| I | 20 |
+| II | 24 |
+| III | 23 |
+| IV | 24 |
+| V | 24 |
+| VI | 21 |
+| VII | 16 |
+| **Semesters I–VII total** | **152** |
 
-These five figures add to 104. They do not establish the complete Semesters I–VII total because Semesters IV and V are not included in that subtotal. The difference between the earlier 152-unit draft and the currently itemized 104-unit subtotal must be reconciled against `curriculum.csv` and the original portal evidence.
+These figures are arithmetic totals of the entries currently recorded in `curriculum.csv`. They are not independently verified official programme credits. Course codes, titles, displayed units, and their equivalence to official credits must be checked against the applicable curriculum for the 2023 admission batch.
 
-Neither figure should be presented as the verified official programme-credit total. Semester VIII is also excluded pending verification of its internship requirements and credits.
+A subset consisting of Semesters I, II, III, VI, and VII totals 104 displayed units. This is a partial-semester subtotal, not the complete Semesters I–VII total.
+
+Semester VIII is excluded because the official internship credit allocation and requirements have not been established. The official programme-credit denominator therefore remains unverified, and the percentage of programme credits affected by the proposed changes cannot yet be calculated.
 
 ## 5. Employer Job-Description Comparison
 
@@ -129,8 +134,8 @@ Percentage of original programme credits affected = (Distinct official credits a
 
 | Metric | Current status |
 |---|---|
-| Previously recorded subtotal for Semesters I–VII | 152 displayed units; reconciliation required |
-| Currently itemized subtotal for Semesters I, II, III, VI, and VII | 104 displayed units |
+| Semesters I–VII total | 152 provisional displayed units from current CSV |
+| Itemized Semesters I, II, III, VI, and VII subtotal | 104 displayed units; partial-semester subset |
 | Verified official programme-credit total | Pending verification |
 | Official Semester VIII internship credits | Unknown |
 | Distinct official credits affected by the final proposal | Pending final change list |
@@ -188,7 +193,7 @@ The proposal should also be checked against the official curriculum and applicab
 
 - The official curriculum version applicable to the 2023 admission batch has not yet been confirmed.
 - Portal-displayed units have not been independently established as official academic credits.
-- The previously recorded 152-unit subtotal and currently itemized 104-unit subtotal must be reconciled.
+- The 152-unit total is an arithmetic sum of the current Semesters I–VII CSV entries, not a verified official programme-credit total.
 - Semester VIII internship credits and requirements remain unknown.
 - The selected job advertisements may change or become unavailable; their actual requirements and access dates must be verified.
 - The proposed changes have not been approved by the institution.
@@ -202,6 +207,6 @@ The proposal should also be checked against the official curriculum and applicab
 
 The preliminary audit suggests that the curriculum redesign could preserve strong computing foundations while strengthening practical software development, AI/ML evaluation, data quality, cybersecurity, usability, and integrated project work.
 
-The recommendations are proposals, not approved curriculum changes. The next priorities are to verify the official programme structure and credit values, reconcile the semester inventory, validate job-description evidence, finalise a non-duplicative list of course changes, calculate the credit impact, and document any available feedback.
+The recommendations are proposals, not approved curriculum changes. The next priorities are to verify the official programme structure and credit values, validate job-description evidence, finalise a non-duplicative list of course changes, calculate the credit impact, and document any available feedback.
 
 The final proposal should demonstrate compliance with the assignment's 20–25% target only after those checks have been completed.
