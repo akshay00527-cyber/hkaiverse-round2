@@ -1,58 +1,67 @@
-# CampusFlow - Illustrative Time-Saving Calculations
+# CampusFlow — Time-Saving Calculations
 
-## 1. Purpose
+## 1. Objective
 
-This document estimates the potential time impact of using CampusFlow for college requests. All figures are illustrative assumptions, not measurements of the selected college's workflow. The actual workflow has not yet been independently verified.
+This document estimates the potential time savings from using CampusFlow to manage college-related requests. The current institutional workflow has not been independently verified, so the values below are illustrative assumptions rather than measured results.
 
-## 2. Assumptions
+## 2. Calculation Formula
 
-| Activity | Assumed time per request |
-|---|---:|
-| Existing workflow handling time | 12 minutes |
-| Proposed CampusFlow handling time | 7 minutes |
-| Additional review and support time | 2 minutes |
+Net time saved per request is calculated as:
 
-The existing workflow might use email or another channel; this must be confirmed through permitted observation or voluntary feedback. These figures are hypothetical and must not be presented as observed institutional data.
+Net time saved = Baseline handling time − Proposed handling time − Additional review and support time
 
-## 3. Calculation
+Baseline handling time represents the assumed time spent handling a request under the existing process. Proposed handling time represents the assumed time using the CampusFlow workflow. Additional review and support time accounts for work that may still be required after introducing the prototype.
 
-**Gross time saved per request**
+## 3. Illustrative Assumptions
 
-12 minutes - 7 minutes = 5 minutes
+- Assumed baseline handling time: 12 minutes per request.
+- Assumed proposed handling time: 7 minutes per request.
+- Assumed additional review and support time: 2 minutes per request.
+- Assumed request volume: 100 requests per month.
 
-**Net time saved per request**
+These values are used only to demonstrate the calculation. They have not been measured at ICFAI/IFHE and must not be presented as actual institutional results.
 
-Net time saved = Existing handling time - Proposed handling time - Additional review and support time
+## 4. Net Time Saved Per Request
 
-12 - 7 - 2 = **3 minutes per request**
+Net time saved = 12 − 7 − 2
 
-**Illustrative monthly impact**
+Net time saved = 3 minutes per request.
 
-Assume 100 requests per month.
+Under these assumptions, the proposed workflow would save an estimated 3 minutes per request after accounting for additional review and support.
 
-3 minutes x 100 requests = 300 minutes
+## 5. Illustrative Monthly Time Savings
 
-300 / 60 = **5 hours per month**
+Assumed monthly request volume = 100 requests.
 
-## 4. Interpretation
+Monthly time saved = 3 minutes × 100 requests
 
-Under these assumptions, CampusFlow could save 3 minutes per request, equivalent to 5 hours per month for 100 requests.
+Monthly time saved = 300 minutes.
 
-This is a hypothetical scenario, not evidence of actual time savings at the selected college. Actual results may be lower, higher, or negative if additional work outweighs the time saved.
+Convert minutes to hours:
 
-## 5. Limitations
+300 ÷ 60 = 5 hours per month.
 
-- Existing workflow handling time has not been measured.
-- CampusFlow handling time has not been measured across a representative sample.
-- The assumed monthly request volume of 100 has not been verified.
-- Additional review and support time is an assumption.
-- Setup, training, maintenance, duplicate review, exceptions, and failure recovery could affect the result.
-- The calculation does not establish that CampusFlow is faster or more effective in real institutional use.
+Therefore, the illustrative estimate is 5 hours saved per month, assuming 100 requests monthly and the handling times specified above.
 
-## 6. Validation Plan
+## 6. Evidence Required to Validate the Estimate
 
-If permission is available, document the existing workflow and measure a comparable sample of requests in both processes. Use consistent start and end points for timing. Record the sample size, request type, handoffs, errors, review time, and support effort without collecting unnecessary personal or confidential information.
+To calculate a more reliable estimate, the following information must be collected with appropriate permission:
 
-Calculate average handling time for each process and subtract all additional review and support effort to estimate net time saved. Record the date, method, limitations, and evidence for every measured value.
+1. The actual process used to handle a request.
+2. The average handling time under the existing process.
+3. The handling time using the proposed workflow.
+4. Additional time spent on review, duplicate checks, corrections, and user support.
+5. The number of requests handled during a defined period.
+6. Time spent dealing with application errors or failed operations.
 
-If institutional access is unavailable, retain these figures as illustrative assumptions and explicitly report that real-world savings could not be validated.
+The method used to obtain each estimate should be documented. Observed values, estimated values, and assumptions must be clearly distinguished.
+
+## 7. Limitations
+
+The actual college workflow and its processing times have not been independently verified. The prototype has not been evaluated through a controlled comparison with an institutional process.
+
+The calculation does not establish that CampusFlow will save 5 hours per month in practice. Actual savings may be lower, higher, or absent depending on request volume, workflow complexity, user behavior, and application reliability.
+
+## 8. Conclusion
+
+The illustrative calculation demonstrates how potential time savings could be estimated for CampusFlow. The result of 3 minutes per request and 5 hours per month is based entirely on stated assumptions. A credible institutional impact estimate requires permission-based workflow investigation and documented handling-time evidence.
