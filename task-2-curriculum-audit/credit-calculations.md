@@ -1,115 +1,79 @@
-# Credit Calculations and Curriculum Change Impact
+# Task 2: Curriculum Credit Calculations
 
-## 1. Purpose
+## 1. Objective
 
-This document records the units displayed in the student academic portal for the B.Tech Computer Science and Engineering programme at ICFAI Tech, IFHE Hyderabad, admission batch 2023-2027.
+This document summarizes the semester-wise units currently recorded in the curriculum audit and explains how the proposed curriculum redesign will be evaluated.
 
-**Important distinction:** These figures were transcribed from portal screenshots. They are portal-displayed units, not independently verified official academic credits. The official curriculum and regulations applicable to the 2023 admission batch must be confirmed before finalising the programme-credit total.
+The available student portal information has not yet established that every displayed unit is an official academic credit. Therefore, the totals below are provisional and must not be treated as verified programme credits.
 
-## 2. Portal-Displayed Units by Semester
+## 2. Semester-Wise Displayed Units
 
-| Semester | Number of courses visible | Displayed-unit subtotal | Verification status |
-|---|---:|---:|---|
-| I | 7 | 20 | Portal screenshot; official credit equivalence to verify |
-| II | 7 | 24 | Portal screenshot; official credit equivalence to verify |
-| III | 8 | 23 | Portal screenshot; official credit equivalence to verify |
-| IV | 8 | 24 | Portal screenshot; official credit equivalence to verify |
-| V | 8 | 24 | Portal screenshot; official credit equivalence to verify |
-| VI | 7 | 21 | Portal screenshot; official credit equivalence to verify |
-| VII | 5 | 16 | Portal screenshot; official credit equivalence to verify |
-| VIII | Pending | Unknown | Internship not yet completed; official credits and requirements pending verification |
-
-## 3. Semester Subtotal Calculations
-
-### Semester I
-
-2 + 4 + 3 + 0 + 3 + 3 + 5 = **20 displayed units**
-
-### Semester II
-
-4 + 4 + 3 + 4 + 3 + 3 + 3 = **24 displayed units**
-
-### Semester III
-
-1 + 4 + 3 + 3 + 3 + 3 + 3 + 3 = **23 displayed units**
-
-### Semester IV
-
-1 + 3 + 4 + 4 + 3 + 3 + 3 + 3 = **24 displayed units**
-
-### Semester V
-
-1 + 3 + 4 + 3 + 3 + 3 + 4 + 3 = **24 displayed units**
-
-### Semester VI
-
-1 + 3 + 4 + 4 + 3 + 3 + 3 = **21 displayed units**
-
-### Semester VII
-
-3 + 4 + 3 + 3 + 3 = **16 displayed units**
-
-## 4. Combined Total for Semesters I-VII
-
-20 + 24 + 23 + 24 + 24 + 21 + 16 = **152 portal-displayed units**
-
-This subtotal covers Semesters I-VII only. Semester VIII internship units are unknown and are not included.
-
-**152 is not a verified total programme-credit count.** Official credit equivalence, the applicable curriculum version, and Semester VIII requirements must be confirmed before calculating the final programme total or the percentage of credits affected by proposed changes.
-
-## 5. Information Required Before Finalising the Programme Total
-
-Confirm the following:
-
-1. The official curriculum and regulations applicable to the 2023 admission batch.
-2. The official credit value of each course and whether portal-displayed units correspond directly to credits.
-3. The exact course titles, codes, and credit values for Semester VII.
-4. The official internship credit value, assessment requirements, and completion conditions for Semester VIII.
-5. The complete programme-credit total and all mandatory course, elective, prerequisite, and regulatory requirements.
-
-Until these details are verified, the programme-credit total must remain **Pending verification**.
-
-## 6. Calculating the Proposed Curriculum Change
-
-After verifying the official programme-credit total and finalising the proposed change list, calculate the percentage of programme credits affected.
-
-**Formula**
-
-Percentage affected = (Distinct official credits affected / Verified total programme credits) x 100
-
-The assignment target is approximately **20-25% of programme credits**.
-
-Count each affected course only once, even if it appears under multiple recommendations. Document whether each course is kept, updated, reduced, replaced, or newly introduced. Distinguish the credits of existing courses being changed from credits proposed for newly added courses.
-
-### Calculation template
-
-| Metric | Value | Status |
+| Semester | Displayed units | Verification status |
 |---|---:|---|
-| Verified total programme credits | Pending | Requires official curriculum verification |
-| Distinct official credits affected | Pending | Requires final change list |
-| Percentage affected | Pending | Calculate after verification |
-| Target range | 20-25% | Assignment requirement |
-| Within target range? | Not yet determined | Do not claim compliance yet |
+| Semester I | 20 | Sum of recorded portal entries; credit interpretation pending |
+| Semester II | 24 | Sum of recorded portal entries; credit interpretation pending |
+| Semester III | 23 | Sum of recorded portal entries; credit interpretation pending |
+| Semester IV | Not available | Course list requires verification |
+| Semester V | Not available | Course list requires verification |
+| Semester VI | 21 | Sum of recorded portal entries; credit interpretation pending |
+| Semester VII | 16 | Provisional total; official course details require verification |
+| Semester VIII | Not available | Internship details and units require verification |
 
-For an update or reduction, count the affected existing course credits once. For a replacement, document the existing credits affected and the proposed replacement credits separately to avoid double-counting. For new courses, show proposed credits separately and explain how they fit the approved programme total.
+The available semester totals for Semesters I, II, III, VI, and VII add up to 104 displayed units. This is only a partial subtotal because Semesters IV and V are incomplete and Semester VII remains provisional.
 
-Do not use illustrative or provisional values as actual programme figures.
+A previous draft reported 152 displayed units for Semesters I–VII. That figure should not be presented as a verified total until the underlying semester entries, including the missing course lists, have been checked and reconciled.
 
-## 7. Credit-Balance and Prerequisite Checks
+## 3. Verification Requirements
 
-Before finalising the proposal, verify that:
+Before calculating official programme credits, the following items must be confirmed:
 
-- The revised programme total meets the applicable official requirements.
-- Mandatory courses and required credits remain covered.
-- Prerequisites are preserved for advanced subjects.
-- Proposed additions do not create semester-load or timetable conflicts.
-- Reduced or replaced content does not remove required learning outcomes.
-- Internship, project, and assessment requirements remain compliant with the applicable regulations.
+1. The applicable curriculum or regulation version for the 2023–2027 admission batch.
+2. The complete course lists for Semesters IV and V.
+3. The official course codes, titles, and units for Semester VII.
+4. The official Semester VIII internship details, where applicable.
+5. Whether the units displayed in the student portal correspond to academic credits.
+6. The reason HS101, Essence of Indian Traditional Knowledge, displays zero units.
+7. The official source or portal evidence supporting each entry.
 
-## 8. Evidence and Limitations
+The source and access date for each verification should be recorded in sources.md.
 
-Semester I-VII figures are based on student academic portal screenshots supplied for this audit. Course details and displayed units were transcribed from those screenshots.
+## 4. Proposed Curriculum Redesign
 
-This is preliminary working evidence, not a certified academic transcript or an independently verified curriculum. The official curriculum version, credit equivalence, and missing Semester VIII details must be verified before the final credit-impact calculation is submitted.
+The redesign aims to improve alignment with software engineering, data engineering, AI/ML, cybersecurity, cloud computing, and responsible AI roles.
 
-No claim is made that the proposed curriculum changes have been approved by the institution.
+Proposed changes include:
+
+- Retain programming fundamentals, data structures, algorithms, databases, and mathematics.
+- Update software engineering and testing content.
+- Strengthen AI/ML evaluation and practical implementation.
+- Improve cloud computing and cybersecurity coverage.
+- Add data engineering and data quality concepts.
+- Include responsible AI, privacy, and model evaluation.
+- Use a practical CampusFlow project to connect requirements, implementation, testing, and documentation.
+- Reduce content only where a verified syllabus comparison demonstrates unnecessary overlap.
+
+These are proposed recommendations. Final changes require comparison with the official curriculum, prerequisite structure, and programme requirements.
+
+## 5. Evaluating the 20–25% Redesign Target
+
+The assignment's proposed 20–25% curriculum-change target must be evaluated using verified programme credits.
+
+After verifying the official total, calculate:
+
+**Target credits = verified programme credits × target percentage**
+
+For a 20% target, multiply the verified total by 0.20. For a 25% target, multiply it by 0.25.
+
+The redesign should then identify the courses or course portions being added, updated, retained, or reduced. Changes must be mapped to actual verified course credits, and any reductions must preserve required learning outcomes and prerequisites.
+
+The current evidence is insufficient to calculate a defensible final credit-change percentage. No official total or percentage is claimed in this document.
+
+## 6. Limitations
+
+The semester data is incomplete, some course entries remain provisional, and the interpretation of displayed units as academic credits has not been confirmed. The proposed curriculum changes have not yet been reconciled against a complete official curriculum for the applicable admission batch.
+
+Consequently, the final programme total, affected credits, and 20–25% redesign calculation remain pending verification.
+
+## 7. Conclusion
+
+The current data supports a preliminary curriculum audit, but it does not yet support a verified programme-credit total or a final percentage for curriculum changes. The next step is to complete the missing semester records, verify official course details and credit rules, and then calculate the redesign impact using the verified data.
