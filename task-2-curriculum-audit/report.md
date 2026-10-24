@@ -1,12 +1,14 @@
-# Task 2 - CSE Curriculum Audit and Redesign Proposal
+# Task 2 — CSE Curriculum Audit and Redesign Proposal
 
 ## 1. Executive Summary
 
-This report presents a preliminary audit and redesign proposal for the B.Tech Computer Science and Engineering programme at ICFAI Foundation for Higher Education (IFHE), Hyderabad, for the 2023-2027 admission batch.
+This report presents a preliminary audit and redesign proposal for the B.Tech Computer Science and Engineering programme at ICFAI Foundation for Higher Education (IFHE), Hyderabad, for the 2023–2027 admission batch.
 
 The audit examines the balance between computing fundamentals, practical software development, artificial intelligence and machine learning, cybersecurity, data management, human-computer interaction, and project work. It uses student academic portal screenshots, an official programme reference, selected employer job descriptions, and AI-assisted subject exercises.
 
-The portal-based inventory contains 152 displayed units across Semesters I-VII. This is a provisional subtotal, not a verified official programme-credit total. Semester VIII internship credits and requirements remain unknown, and the applicable official curriculum version must be confirmed before finalising the redesign.
+The current credit analysis contains provisional portal-displayed values, but the complete semester inventory and the relationship between displayed units and official academic credits have not been fully reconciled. A previous draft recorded a subtotal of 152 displayed units for Semesters I–VII. The currently itemized figures for Semesters I, II, III, VI, and VII total 104 displayed units. These figures cover different levels of completeness and must be reconciled against the original portal evidence before either subtotal is treated as a complete inventory.
+
+Semester VIII internship credits and requirements also remain unverified. The applicable official curriculum version for the 2023 admission batch must be confirmed before finalising the redesign or calculating the percentage of programme credits affected.
 
 The recommendations below are proposals for review, not approved institutional curriculum changes.
 
@@ -14,14 +16,14 @@ The recommendations below are proposals for review, not approved institutional c
 
 - **Institution:** ICFAI Foundation for Higher Education, Hyderabad
 - **Programme:** B.Tech Computer Science and Engineering
-- **Admission batch:** 2023-2027
+- **Admission batch:** 2023–2027
 - **Audit focus:** Programming, algorithms, databases, software engineering, AI/ML, data engineering, cybersecurity, HCI, and practical project work.
 
 The intended audit scope covers all eight semesters, including course prerequisites, compulsory requirements, electives, internships, projects, and graduation rules.
 
 ## 3. Evidence and Method
 
-The preliminary course inventory in `curriculum.csv` was transcribed from student academic portal screenshots for Semesters I-VII. Semester IV and V course records are present in the inventory. Semester VIII internship credits and requirements are not yet available.
+The preliminary course inventory in `curriculum.csv` was transcribed from student academic portal screenshots. The available evidence is incomplete or requires further verification for some semester records. Semester VIII internship credits and requirements have not yet been established.
 
 The official programme reference recorded in `sources.md` is:
 
@@ -42,37 +44,49 @@ The audit method is:
 
 ## 4. Preliminary Curriculum Observations
 
-The portal-based inventory includes programming, data structures, object-oriented programming, algorithms, theory of computation, database management, software engineering, computer networks, cloud computing, artificial intelligence, machine learning, computer vision, big data systems, and a special project.
+The preliminary inventory identifies computing subjects and areas including programming, data structures, object-oriented programming, algorithms, theory of computation, database management, software engineering, computer networks, cloud computing, artificial intelligence, machine learning, computer vision, big-data systems, and project work. Each course must be checked against the applicable official curriculum.
 
-The portal lists these Semester VII subjects:
+The following Semester VII subjects and course codes were recorded in the preliminary inventory:
 
-- CS415 - Ethical Hacking
-- DS306 - Deep Learning
-- DS311 - Natural Language Processing
-- DS401 - Human Computer Interaction
-- MG401 - Introduction to Entrepreneurship
+- CS415 — Ethical Hacking
+- DS306 — Deep Learning
+- DS311 — Natural Language Processing
+- DS401 — Human Computer Interaction
+- MG401 — Introduction to Entrepreneurship
 
-The course titles and displayed units are transcribed from portal evidence. Their official curriculum version and credit equivalence still require verification.
+These entries are based on the collected portal information and still require confirmation against the official curriculum version applicable to the 2023 admission batch. Their official credit values must also be verified.
 
-The preliminary subtotal is 152 portal-displayed units for Semesters I-VII. Semester VIII is excluded because its internship credit value is unknown. This subtotal must not be represented as the verified total programme credits.
+### Credit inventory status
+
+A previous draft recorded 152 portal-displayed units for Semesters I–VII. The current credit-calculation file itemizes 104 displayed units for Semesters I, II, III, VI, and VII:
+
+- Semester I: 20 displayed units
+- Semester II: 24 displayed units
+- Semester III: 23 displayed units
+- Semester VI: 21 displayed units
+- Semester VII: 16 provisional units
+
+These five figures add to 104. They do not establish the complete Semesters I–VII total because Semesters IV and V are not included in that subtotal. The difference between the earlier 152-unit draft and the currently itemized 104-unit subtotal must be reconciled against `curriculum.csv` and the original portal evidence.
+
+Neither figure should be presented as the verified official programme-credit total. Semester VIII is also excluded pending verification of its internship requirements and credits.
 
 ## 5. Employer Job-Description Comparison
 
 The selected employer roles and source URLs are documented in `job-descriptions.md` and `sources.md`.
 
-The comparison covers three different career directions:
+The comparison covers three career directions:
 
-- **HCLTech:** Analyst/support or generative-AI-related work.
-- **Accenture:** AI/ML computational-science-related work.
-- **Google:** AI/ML software engineering work.
+- **HCLTech:** Analyst (Support & Operations), with a Generative AI-related job summary.
+- **Accenture:** AI/ML Computational Science Associate.
+- **Google:** Software Engineer II, AI/ML.
 
-These roles can help identify practical skills worth considering, such as programming, debugging, data handling, testing, machine learning, deployment, and communication. However, job advertisements differ in seniority and requirements; they do not establish that every listed skill should become a compulsory university course.
+These roles can help identify practical skills worth considering, such as programming, debugging, data handling, testing, machine learning, deployment, and communication. However, job advertisements differ in seniority and requirements. They do not establish that every listed skill should become a compulsory university course.
 
-Before final submission, verify each listing's exact title, role level, required skills, availability, and access date. Quote or paraphrase only requirements that are actually present in the advertisement. Do not describe an experienced role as entry-level unless the listing supports that description.
+Before final submission, verify each listing's exact title, role level, required skills, availability, and access date. Include only requirements supported by the actual advertisement. The Google Software Engineer II role should be treated as an experienced-role benchmark rather than automatically described as an entry-level opportunity.
 
 ## 6. Proposed KEEP, UPDATE, REDUCE, and ADD Recommendations
 
-The following 12 recommendations are provisional proposals based on the preliminary course inventory and selected employer-role comparisons. They must be checked against the official syllabus, course learning outcomes, employer evidence, and institutional regulations before being finalised.
+The following recommendations are provisional proposals based on the preliminary inventory and selected employer-role comparisons. They must be checked against the official syllabus, course learning outcomes, employer evidence, and institutional regulations before being finalised.
 
 | No. | Action | Curriculum area | Proposed decision and reason |
 |---:|---|---|---|
@@ -80,7 +94,7 @@ The following 12 recommendations are provisional proposals based on the prelimin
 | 2 | KEEP | Data structures, algorithms, and object-oriented programming | Retain core problem-solving, algorithm analysis, abstraction, and maintainable program design. |
 | 3 | KEEP | Database management and computer networks | Preserve SQL, data integrity, client-server communication, and network fundamentals for application and cloud work. |
 | 4 | UPDATE | Software engineering | Strengthen practical work in version control, code review, automated testing, issue tracking, and technical documentation. |
-| 5 | UPDATE | AI and machine-learning subjects | Include reproducible experiments, appropriate baselines, correct data splitting, evaluation metrics, and error analysis. |
+| 5 | UPDATE | AI and machine-learning subjects | Include reproducible experiments, suitable baselines, correct data splitting, evaluation metrics, and error analysis. |
 | 6 | UPDATE | Cloud computing | Add practical deployment, configuration, monitoring, access-control, and cost-awareness exercises. |
 | 7 | UPDATE | Ethical hacking and cybersecurity | Emphasise authorised lab testing, secure coding, threat modelling, and defensive reporting. |
 | 8 | UPDATE | Human Computer Interaction | Include accessibility checks and a usability evaluation with defined tasks, measures, and honest reporting of results. |
@@ -91,11 +105,11 @@ The following 12 recommendations are provisional proposals based on the prelimin
 
 These recommendations are proposals, not approved institutional changes. Before finalising them, identify the exact existing courses affected, support each decision with syllabus or job-description evidence, and check prerequisites, compulsory requirements, semester workload, and applicable regulations.
 
-The REDUCE recommendation is conditional: no course or credit allocation should be reduced solely on the assumption that content overlaps.
+The REDUCE recommendation is conditional. No course or credit allocation should be reduced solely on the assumption that content overlaps.
 
 ## 7. Proposed Credit-Change Plan
 
-The assignment asks for proposed changes affecting approximately 20–25% of programme credits. This target is **not yet calculated or verified**.
+The assignment asks for proposed changes affecting approximately 20–25% of programme credits. This target has **not yet been calculated or verified**.
 
 The available evidence does not establish the official programme-credit denominator. The applicable curriculum version for the 2023 admission batch, the official credit equivalence of portal-displayed units, and Semester VIII internship credits must be confirmed first.
 
@@ -111,11 +125,12 @@ The final calculation must:
 
 **Formula**
 
-Percentage of original programme credits affected = (Distinct official credits affected / Verified total programme credits) × 100
+Percentage of original programme credits affected = (Distinct official credits affected ÷ Verified total programme credits) × 100
 
 | Metric | Current status |
 |---|---|
-| Portal-displayed subtotal for Semesters I–VII | 152 displayed units |
+| Previously recorded subtotal for Semesters I–VII | 152 displayed units; reconciliation required |
+| Currently itemized subtotal for Semesters I, II, III, VI, and VII | 104 displayed units |
 | Verified official programme-credit total | Pending verification |
 | Official Semester VIII internship credits | Unknown |
 | Distinct official credits affected by the final proposal | Pending final change list |
@@ -138,20 +153,20 @@ For every exercise, record the actual prompt, AI tool/model, date, relevant outp
 
 ## 9. Proposed Lab or Capstone
 
-**Proposed title:** CampusFlow - Student Request Workflow and Analytics
+**Proposed title:** CampusFlow — Student Request Workflow and Analytics
 
 CampusFlow is a prototype built with Streamlit and MySQL for submitting, storing, and tracking synthetic student-service requests. It provides a practical starting point for work on workflow design, data persistence, validation, and status tracking.
 
 A proposed academic extension could include:
 
 - A documented workflow with owners, approval boundaries, and exception handling.
-- Authentication and server-side role-based authorization.
+- Authentication and server-side role-based authorisation.
 - Audit logging and appropriate protection of sensitive information.
-- Tests for normal requests, missing information, duplicates, unauthorized actions, and database failure.
+- Tests for normal requests, missing information, duplicates, unauthorised actions, and database failure.
 - Aggregated reporting on request categories and resolution times using synthetic or appropriately anonymised data.
 - A documented evaluation that distinguishes implemented functionality from proposed improvements.
 
-The current Student/Staff selector is a demonstration control, not secure authentication or authorization. Database outage recovery and unauthorized-access prevention have not been verified. CampusFlow is not a production student-management system.
+The current Student/Staff selector is a demonstration control, not secure authentication or authorisation. Database outage recovery and prevention of unauthorised access have not been verified. CampusFlow is not a production student-management system.
 
 The project could be proposed as a lab or capstone because it connects requirements analysis, database design, software engineering, security, HCI, testing, and analytics. Its suitability and credit allocation would require institutional approval.
 
@@ -165,7 +180,7 @@ The next step is to seek voluntary feedback from a faculty member or graduate, i
 - What prerequisites or accreditation requirements could constrain the changes?
 - Would the proposed CampusFlow capstone be appropriate for student assessment?
 
-Record the date, participant role (without unnecessary personal details), consent, questions, and a fair summary of feedback. If access is unavailable or no one volunteers, document that limitation instead of inventing responses.
+Record the date, participant role without unnecessary personal details, consent, questions, and a fair summary of feedback. If access is unavailable or no one volunteers, document that limitation instead of inventing responses.
 
 The proposal should also be checked against the official curriculum and applicable regulations before finalisation.
 
@@ -173,6 +188,7 @@ The proposal should also be checked against the official curriculum and applicab
 
 - The official curriculum version applicable to the 2023 admission batch has not yet been confirmed.
 - Portal-displayed units have not been independently established as official academic credits.
+- The previously recorded 152-unit subtotal and currently itemized 104-unit subtotal must be reconciled.
 - Semester VIII internship credits and requirements remain unknown.
 - The selected job advertisements may change or become unavailable; their actual requirements and access dates must be verified.
 - The proposed changes have not been approved by the institution.
@@ -180,10 +196,12 @@ The proposal should also be checked against the official curriculum and applicab
 - AI-assisted exercises require independent verification; proposed experiments and success criteria are not completed results.
 - Faculty or graduate feedback must not be claimed unless it has actually been obtained.
 - CampusFlow is a prototype and is not production-ready.
-- The 20-25% credit-impact target remains uncalculated until the official credit total and distinct affected courses are established.
+- The 20–25% credit-impact target remains uncalculated until the official credit total and distinct affected courses are established.
 
 ## 12. Conclusion
 
 The preliminary audit suggests that the curriculum redesign could preserve strong computing foundations while strengthening practical software development, AI/ML evaluation, data quality, cybersecurity, usability, and integrated project work.
 
-The recommendations are proposals, not approved curriculum changes. The next priorities are to verify the official programme structure and credit values, validate job-description evidence, finalise a non-duplicative list of course changes, calculate the credit impact, and document any available feedback. The final proposal should demonstrate compliance with the assignment target only after those checks have been completed.
+The recommendations are proposals, not approved curriculum changes. The next priorities are to verify the official programme structure and credit values, reconcile the semester inventory, validate job-description evidence, finalise a non-duplicative list of course changes, calculate the credit impact, and document any available feedback.
+
+The final proposal should demonstrate compliance with the assignment's 20–25% target only after those checks have been completed.
